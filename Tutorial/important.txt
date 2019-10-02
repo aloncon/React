@@ -1,0 +1,4 @@
+Lifecycle Methods (on Class; React.memo on function components)
+componentDidMount() method runs after the component output has been rendered to the DOM.
+componentWillUnmount
+
