@@ -23,6 +23,16 @@ chrome-user-data
 *.swp
 *.swo
 *.zip
+TanyaReact/
+assignment-one/
+assignment2-arrays-condition
+course1/
+react-tutorial/
+redux-assignment-2-problem/
+redux-01-start
+redux-assignment-2-problem
+redux-assignment-2-solution
+routing-assignment-problem
 
 packages/react-devtools-core/dist
 packages/react-devtools-extensions/chrome/build
