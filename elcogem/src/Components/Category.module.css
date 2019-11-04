@@ -1,0 +1,14 @@
+
+
+.Category {
+ padding: 5px 5px 20px 5px;
+ margin: 10px;
+ position: relative;
+}
+
+.ImgText{
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    font-style: italic;
+}

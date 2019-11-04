@@ -1,0 +1,23 @@
+.Content {
+    padding: 10px 20px 20px 20px;
+}
+.Footer {
+    background-color: #FFF;
+    
+    
+}
+.FooterInner {
+    background-color: #f2f2f2;
+    width:100%;
+    padding:0;
+    margin: 0px;
+    height: 200px;
+}
+.FooterInner P{
+ padding: 10px 20px 10px 20px;
+}
+
+.FooterSeperator {
+    text-align: center;
+    padding:3px 0;
+}
