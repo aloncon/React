@@ -16,8 +16,10 @@ function App() {
       <Switch>
          
          <Route path="/about" component={About}/>
-         <Route path="/main" component={Home}/>  
+         <Route path="/main" component={Home}/>
+         <Route path="/home" component={Home}/>  
          <Route path="/contact-us" component={ContactUs}/>
+         <Route path="/contact" component={ContactUs}/>
          <Route path="/hottest-collection" component={Hottest}/>
          <Route path="/trade-shows" component={TradeShows}/>  
          
