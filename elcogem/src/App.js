@@ -22,8 +22,8 @@ function App() {
          <Route path="/contact" component={ContactUs}/>
          <Route path="/hottest-collection" component={Hottest}/>
          <Route path="/trade-shows" component={TradeShows}/>  
-         
          <Route path="/"  component={Home}/>
+         
        </Switch>
       </Layout>
      

@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cd build\\static\\js && copy main.*.js bundle.js && copy 2.*.js 2.bundle.js && cd ..\\css && copy main.*.css main.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

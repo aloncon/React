@@ -5,5 +5,7 @@
     font-weight: 300;
     color: #676767;
     font-size: 18px;
+    max-width: 1000px;
+    margin: auto;
 
 }

@@ -4,6 +4,7 @@ const initialState = {
     showSideDrawer:false
 }
 
+
 const reducer = (state = initialState, action) => {
     switch(action.type){
      case(actionTypes.TOGGLE_SIDE_DRAWER):

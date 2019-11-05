@@ -19,8 +19,7 @@ const SideDrawer = (props) => {
         <Aux>
             <Backdrop isOpen={props.showSideDrawer}
                       closeClick={props.onToggleClick} /> 
-            <div className={styleClass.join(' ')}
-                 >
+            <div className={styleClass.join(' ')}>
                
                 <Logo />
                 <nav>

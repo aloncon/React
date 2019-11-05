@@ -62,8 +62,13 @@
     background-color: white;
 }
 
+.DesktopOnly{
+    height: 30px;
+}
 @media (max-width: 599px) {
     .DesktopOnly{
         display: none;
+       
+        
     }
 }
