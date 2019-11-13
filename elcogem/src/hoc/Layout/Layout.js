@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import * as actionTypes from '../../Store/actions';
+import * as actionTypes from '../../Store/actions/actions';
 import { connect } from 'react-redux';
 import Toolbar from '../../Components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../Components/Navigation/SideDrawer/SideDrawer';
@@ -42,7 +42,7 @@ class Layout extends Component {
                     {this.props.children}
                 </main>
                  <footer className={styles.Footer}>
-                     <div className={styles.FooterSeperator}><img src='./images/gem_line.jpg'/></div>
+                     <div className={styles.FooterSeperator}><img src='./images/gem_line_mobile.jpg'/></div>
                      <div className={styles.FooterInner}> 
                       <p><strong>Get Connected</strong> <br/>
                          Follow us online for specials and more! <br/>
@@ -57,7 +57,7 @@ class Layout extends Component {
 
 const mapStateToProps = (state)=>{
     return {
-        showSideDrawer: state.showSideDrawer 
+        showSideDrawer: state.nav.showSideDrawer 
     };
 }
 

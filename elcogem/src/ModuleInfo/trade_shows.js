@@ -5,7 +5,7 @@ const tradeShowsList = {
         titleSub: "FRI, MAY 31 – MON, JUNE 3, 2019",
         Boot: "Booth Number: 51012",
         coments: "SANDS EXPO & THE VENETIAN | LAS VEGAS, NV",
-        mainImage: "images/ELCOGEM-Trade-Showe-web.jpg",
+        mainImage: "trade_shows/ELCOGEM-Trade-Showe-web.jpg",
         mainImageTitle: "You are invited to view our newest collections at JCK Las Vegas."
     },
     "tradeShow2" : {

@@ -1,14 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
-import {createStore} from 'redux';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
-import reducer from './Store/reducer/reducer';
+import thunk from 'redux-thunk';
+import navReducer from './Store/reducer/navigation';
+import tradeReducer from './Store/reducer/tradeShows';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(reducer);
+const rootReducer = combineReducers({
+    trade : tradeReducer,
+    nav: navReducer
+   });
+
+const store = createStore(
+    rootReducer, 
+    applyMiddleware(thunk)
+);
 
 const app = (
 <Provider store={store}>
