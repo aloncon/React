@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46.243" height="46.243" viewBox="0 0 46.243 46.243">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        opacity: 0.2;
+      }
+
+      .cls-4 {
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-width: 3px;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="46.243" height="46.243"/>
+    </clipPath>
+  </defs>
+  <g id="Miss" class="cls-2">
+    <g id="Group_33" data-name="Group 33" class="cls-3" transform="translate(-25.315 -421.082) rotate(45)">
+      <line id="Line_1" data-name="Line 1" class="cls-4" x1="29.698" transform="translate(348.349 265) rotate(90)"/>
+      <line id="Line_2" data-name="Line 2" class="cls-4" x2="29.698" transform="translate(333.5 279.849)"/>
+    </g>
+  </g>
+</svg>

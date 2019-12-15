@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="91.273" height="21.183" viewBox="0 0 91.273 21.183">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #1e6e77;
+      }
+
+      .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-4 {
+        fill: #25909c;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="91.273" height="21.183"/>
+    </clipPath>
+  </defs>
+  <g id="Repeat_Grid_14" data-name="Repeat Grid 14" class="cls-2">
+    <g id="Group_198" data-name="Group 198" transform="translate(-7.698 94)">
+      <path id="Path_151" data-name="Path 151" class="cls-3" d="M18.834-94l3.081,7.469,8.056.622-6.152,5.238,1.9,7.854-6.883-4.232-6.883,4.232,1.9-7.854L7.7-85.909l8.056-.622L18.834-94Z" transform="translate(0)"/>
+      <path id="Path_152" data-name="Path 152" class="cls-4" d="M511.094-94l3.081,7.469,8.056.622-6.152,5.238,1.9,7.854-6.883-4.232V-94Z" transform="translate(-492.259)"/>
+    </g>
+    <g id="Group_198-2" data-name="Group 198" transform="translate(20.302 94)">
+      <path id="Path_151-2" data-name="Path 151" class="cls-3" d="M18.834-94l3.081,7.469,8.056.622-6.152,5.238,1.9,7.854-6.883-4.232-6.883,4.232,1.9-7.854L7.7-85.909l8.056-.622L18.834-94Z" transform="translate(0)"/>
+      <path id="Path_152-2" data-name="Path 152" class="cls-4" d="M511.094-94l3.081,7.469,8.056.622-6.152,5.238,1.9,7.854-6.883-4.232V-94Z" transform="translate(-492.259)"/>
+    </g>
+    <g id="Group_198-3" data-name="Group 198" transform="translate(48.302 94)">
+      <path id="Path_151-3" data-name="Path 151" class="cls-3" d="M18.834-94l3.081,7.469,8.056.622-6.152,5.238,1.9,7.854-6.883-4.232-6.883,4.232,1.9-7.854L7.7-85.909l8.056-.622L18.834-94Z" transform="translate(0)"/>
+      <path id="Path_152-3" data-name="Path 152" class="cls-4" d="M511.094-94l3.081,7.469,8.056.622-6.152,5.238,1.9,7.854-6.883-4.232V-94Z" transform="translate(-492.259)"/>
+    </g>
+  </g>
+</svg>
