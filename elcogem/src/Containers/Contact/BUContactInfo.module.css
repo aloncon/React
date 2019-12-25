@@ -1,0 +1,32 @@
+.ContactInfoMain {
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    font-family: 'Raleway', Helvetica, Arial, Lucida, sans-serif;
+}
+.Head {
+    width: 100%;
+    font-size:34px;
+    margin:auto;
+    text-align: center;
+
+}
+
+.Body{
+    width: 100%;
+    text-align: center;
+
+}
+
+.Table {
+    display: table;
+    margin: 0 auto;
+}
+
+.Table_UL{
+    list-style: circle;    
+}
+.Table_UL LI{
+    display: inline;  
+    padding: 0 30px 0 0;  
+}

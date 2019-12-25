@@ -14,7 +14,16 @@ function App() {
     <div className={styles.Main}>
       <Layout>
       <Switch>
-         
+        
+         <Route path="/new/about" component={About}/>
+         <Route path="/new/main" component={Home}/>
+         <Route path="/new/home" component={Home}/>  
+         <Route path="/new/contact-us" component={ContactUs}/>
+         <Route path="/new/contact" component={ContactUs}/>
+         <Route path="/new/hottest-collection" component={Hottest}/>
+         <Route path="/new/trade-shows" component={TradeShows}/>  
+
+
          <Route path="/about" component={About}/>
          <Route path="/main" component={Home}/>
          <Route path="/home" component={Home}/>  

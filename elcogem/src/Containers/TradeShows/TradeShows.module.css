@@ -1,8 +1,11 @@
 .contentHeader{
-    padding: 10px 0 10px 0;
+    padding: 0px 0 10px 0;
 }
 .content DIV IMG{
 width: 100%;
+}
+.imageDiv img {
+    width:100%;
 }
 .h2{
     font-size:20px;

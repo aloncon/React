@@ -10,23 +10,20 @@ import styles from './TradeShows.module.css';
 class TradeShows extends Component {
     state = {
         showModal: false,
-        ModalKey:null
+        ModalKey: null
     }
     componentDidMount () {
-        console.log("[TRADE SHOWS]: did mount - trade Objext before" , this.props.tradeShowList);
         this.props.dispatch(actionTypes.loadTradeShows());
-        console.log("[TRADE SHOWS]: did mount - trade Objext after" , this.props.tradeShowList);
     }
 
     OpenModalHendler = (key) => {
-        console.log('XXX OpenModalHendler clicked: Key ' + key);
+        
         this.setState({
             showModal:true,
             ModalKey: key
         });
     }
     closeModalHandler (){
-        console.log('XXX CloseModalHendler clicked');
         this.setState({
             showModal:false
         });
@@ -34,12 +31,12 @@ class TradeShows extends Component {
     }
         
     render() {
-        console.log("[TRADE SHOWS]: RENDER STARTED " , this.props.tradeShowList);
+       /*
         for(let key in this.props.tradeShowList){
             if(tradeShowList.hasOwnProperty(key)){
                 console.log("trade list", this.props.tradeShowList[key]);
             }
-        }
+        }*/
 
         const loading = this.props.loading ? <Loading /> : null;
         const errorDisplay = this.props.errorMessage ? <div>ERROR</div> : null;
@@ -56,7 +53,7 @@ class TradeShows extends Component {
         const dataModal = this.props.tradeShowList[this.state.ModalKey]; 
         const modalContent = dataModal ? (
             <div className={styles.contentHeader}>
-                <div className={styles.h2}>{dataModal.mainImageTitle}</div>
+                <div className={styles.h2}>{dataModal.modalTitle}</div>
                 <div className={styles.h3}>{dataModal.titleMain}</div>
                 <div className={styles.h4}>{dataModal.titleSub}</div>
                 <div className={styles.h4}>{dataModal.Boot}</div>
@@ -64,7 +61,7 @@ class TradeShows extends Component {
             </div>
         ) : <div></div>;
         const modalImage = (dataModal && dataModal.mainImage) ? (
-            <div className={styles.image}>
+            <div className={styles.imageDiv}>
                 <img src={dataModal.mainImage} />
             </div>) : <div></div>; 
 

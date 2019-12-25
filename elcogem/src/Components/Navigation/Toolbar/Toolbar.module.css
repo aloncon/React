@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     background-color: #151e35;
-    align-items: center;
+    #align-items: center;
     z-index: 90;
     position: relative;
 }
@@ -23,6 +23,7 @@
     z-index: 90;
     color: white;
 }
+
 .TextWrapper{
     width:300px;
     text-align: center;
@@ -52,9 +53,11 @@
 }
 
 .Logo{
-    margin-right: 20px;
-  
-    padding: 10px 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: fit-content;
+    #padding: 10px 10px;
+    padding: 0px;
     border-radius:5px;
     border: 1px solid white;
     align-items: center;
@@ -65,7 +68,21 @@
 .DesktopOnly{
     height: 30px;
 }
+
 @media (max-width: 599px) {
+    .Logo img{
+        width:75px;
+    }
+    .TextWrapper H2{
+        font-size: 30px;
+        line-height: 20px;
+    }
+    .TextWrapper H3{
+        padding: 5px 5px;
+        font-size: 18px;
+        line-height: 20px;
+        }
+
     .DesktopOnly{
         display: none;
        

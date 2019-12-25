@@ -1,23 +1,30 @@
+.titleMobileTextCaption {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Roboto Slab ,Helvetica Neue ,Helvetica,Arial,sans-serif';
+}
+.titleTextCaption {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Roboto Slab ,Helvetica Neue ,Helvetica,Arial,sans-serif';
+}
 .Content {
-    padding: 10px 20px 20px 20px;
+  padding: 10px 20px 20px 20px;
 }
 .Footer {
-    background-color: #FFF;
-    
-    
+  background-color: #FFF;
 }
 .FooterInner {
-    background-color: #f2f2f2;
-    width:100%;
-    padding:0;
-    margin: 0px;
-    height: 200px;
+  background-color: #f2f2f2;
+  width: 100%;
+  padding: 0;
+  margin: 0px;
+  height: 200px;
 }
-.FooterInner P{
- padding: 10px 20px 10px 20px;
+.FooterInner P {
+  padding: 10px 20px 10px 20px;
 }
-
 .FooterSeperator {
-    text-align: center;
-    padding:3px 0;
+  text-align: center;
+  padding: 3px 0;
 }

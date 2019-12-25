@@ -19,6 +19,7 @@ class Layout extends Component {
     }
     
     toggleCloseHandler = () => {
+
         this.setState({
             showSideDrawer: false
         })
@@ -39,8 +40,10 @@ class Layout extends Component {
                             onToggleClick={this.props.onToggleClick}/>         
                
                 <main className={styles.Content}>
+
                     {this.props.children}
                 </main>
+
                  <footer className={styles.Footer}>
                      <div className={styles.FooterSeperator}><img src='./images/gem_line_mobile.jpg'/></div>
                      <div className={styles.FooterInner}> 

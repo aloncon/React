@@ -6,10 +6,14 @@ class Modal extends Component {
     render(){
         let backdropStyle = styles.Backdrop;
         let modalStyles = styles.Modal;
+        
 
         if (!this.props.showModal){
             backdropStyle = styles.ModalOff;
             modalStyles = styles.ModalOff;
+            document.body.style.overflowY = 'auto';
+        }else{
+            document.body.style.overflowY = 'hidden';
         }
 
         return (

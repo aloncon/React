@@ -9,14 +9,13 @@ export const LOAD_TRADE_FAIL = 'LOAD_TRADE_FAIL';
 
 
 export function loadTradeShows() {
-    return dispatch => {
-        console.log("Fetch Products Begin: flag true");
-        dispatch(loadTradeStart());
 
+    return dispatch => {
+        dispatch(loadTradeStart());
         setTimeout(()=>{
             dispatch(loadTradeSuccess(tradeShowList))
             return tradeShowList;
-        }, 500)    
+        }, 10)    
         
     }
 }

@@ -1,0 +1,39 @@
+@import url("./less/vars.less");
+
+.Main {
+    margin: 0;
+    padding: 0;
+    font-family: @fontFamily;
+    font-weight: 300;
+    color: @colorGrey;
+    font-size: @fontSizeMain;
+    max-width: @maxWidth;
+    margin: auto;
+}
+
+H2{
+    font-size: @fontSizeTitels;
+}
+
+H3{
+    font-size: @fontSizeMain;
+}
+P{
+    font-size: @fontSizeMain;
+}
+
+@media (max-width: 600px){
+    .Main{
+        font-size: @fontMobileSizeMain;
+    }
+    H2{
+        font-size: @fontMobileSizeTitels;
+    }
+
+    H3{
+        font-size: @fontMobileSizeMain;
+    }
+    P{
+        font-size: @fontMobileSizeMain;
+    }
+}

@@ -1,0 +1,38 @@
+
+.preContentDiv {
+ padding: 20px 0;
+}
+
+.preContentDiv IMG {
+  float: right;
+  padding: 0;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+.preContentDiv P {
+  text-align: left;
+  padding-top: 10px;
+}
+
+.desktop {
+  display: block;
+}
+.mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .preContentDiv {
+    text-align: center;
+  }
+  .preContentDiv IMG {
+    float: none;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+
+
+}
