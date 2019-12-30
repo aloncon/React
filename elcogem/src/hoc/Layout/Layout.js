@@ -3,6 +3,7 @@ import * as actionTypes from '../../Store/actions/actions';
 import { connect } from 'react-redux';
 import Toolbar from '../../Components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../Components/Navigation/SideDrawer/SideDrawer';
+import Footer from '../../Containers/Footer/Footer';
 
 import styles from './Layout.module.css';
 
@@ -43,16 +44,7 @@ class Layout extends Component {
 
                     {this.props.children}
                 </main>
-
-                 <footer className={styles.Footer}>
-                     <div className={styles.FooterSeperator}><img src='./images/gem_line_mobile.jpg'/></div>
-                     <div className={styles.FooterInner}> 
-                      <p><strong>Get Connected</strong> <br/>
-                         Follow us online for specials and more! <br/>
-                         Face | Twi | Iins | </p>
-                      <p>Copyright 2019 © ElcoGem Co. - Since 1985, All Rights Reserved.</p>
-                     </div>
-                 </footer> 
+                <Footer/>
             </div>
         );
     }

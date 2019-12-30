@@ -6,18 +6,22 @@ import styles from './PreContent.module.css';
 //import styles from ''
 
 const PreContent = () => {
+    const innerWinWidth = windowSize.useWindowWidth();
     const getWidthType = (width) => {
+        if(width > 600)
+            return 'ruby_bulk_192.jpg';
         if(width >= 460)
-            return '_400';
+            return 'clean_folwer_400.jpg';
         if(width >= 360)
-            return '_300';
+            return 'clean_folwer_300.jpg';
 
-        return '_200';
+        return 'clean_folwer_200.jpg';
     }
-    const imageSrc = windowSize.useWindowWidth() > 600 ? 'ruby_bulk_192.jpg' : 'clean_folwer'+getWidthType(windowSize.useWindowWidth())+'.jpg';
+    const imageSrc = getWidthType(innerWinWidth);
+    //const imageSrc = window.innerWidth > 600 ? 'ruby_bulk_192.jpg' : 'clean_folwer'+getWidthType(window.innerWidth)+'.jpg';
     return (
     <div className={styles.preContentDiv}>
-       <Asset src={`images/${imageSrc}`}/>
+       <Asset src={`_images/${imageSrc}`}/>
         { /*<Asset className={styles.mobile} src='images/ruby_bulk_300.jpg'/> */ }
       <p>Established in the year 1985, Elco Gem Co. is a top class exporter of exclusive variety of Emerald,
           Ruby, Sapphire and other Semi-Precious Stones. </p>

@@ -9,7 +9,7 @@ const NavigationItem = (props)=>{
     //console.log("baseSrc ...",props.baseSrc);
     return (
         <li className={styles.NavigationItem}>
-            <NavLink 
+            <NavLink exact
                      activeClassName={styles.active}  
                      to={link}
                      onClick={props.onNavItemClicked}>{props.children}</NavLink>

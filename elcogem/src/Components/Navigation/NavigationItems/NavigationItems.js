@@ -6,7 +6,8 @@ const NavigationItems = (props)=>{
     return (
         <div className={styles.NavigationItems}>
             <ul>
-                <NavigationItem  link={'home'}>Home</NavigationItem>
+                <NavigationItem  link={'/'}>Home</NavigationItem>
+                {/*NavigationItem  link={'home'}>Home</NavigationItem> */}
                 <NavigationItem  link={'about'}>About</NavigationItem>
                 <NavigationItem  link={'trade-shows'}>Trade Shows</NavigationItem>
                 <NavigationItem  link={'hottest-collection'}><i>Collection From Media</i></NavigationItem>

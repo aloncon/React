@@ -13,7 +13,7 @@ export const useWindowWidth = () => {
         return ()=>{
             window.removeEventListener('resize', handelWinResize);
         }
-    }, []);
+    });
 
     return winWidth;
 }

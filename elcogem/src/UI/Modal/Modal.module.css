@@ -57,15 +57,16 @@
 .ButtonDiv button{
     color: #c1c1c1;
     font-weight: bold;
-    cursor: pointer;
     opacity: 0.5;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
     outline:none;
+    cursor: pointer;
 }
 .ButtonDiv button:hover{
-    opacity: 1;    
+    opacity: 1;
+    cursor: pointer;
 }
 
 .ButtonDiv button:before,
@@ -75,6 +76,7 @@
     height: 20px;
     width: 3px;
     background-color: #333;
+    cursor: pointer;
   
 }
 .ButtonDiv button:before{

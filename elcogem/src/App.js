@@ -1,5 +1,6 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
+//import {browserHistory} from 'react-router';
 import Layout from './hoc/Layout/Layout';
 import styles from './App.module.css';
 import About from './Components/About/About';
@@ -13,27 +14,29 @@ function App() {
   return (
     <div className={styles.Main}>
       <Layout>
-      <Switch>
+       <Switch>
         
          <Route path="/new/about" component={About}/>
          <Route path="/new/main" component={Home}/>
-         <Route path="/new/home" component={Home}/>  
+         <Route path="/new/home" component={Home}/>
          <Route path="/new/contact-us" component={ContactUs}/>
          <Route path="/new/contact" component={ContactUs}/>
          <Route path="/new/hottest-collection" component={Hottest}/>
-         <Route path="/new/trade-shows" component={TradeShows}/>  
+         <Route path="/new/trade-shows" component={TradeShows}/>
 
 
          <Route path="/about" component={About}/>
          <Route path="/main" component={Home}/>
-         <Route path="/home" component={Home}/>  
+         <Route path="/home" component={Home}/>
          <Route path="/contact-us" component={ContactUs}/>
          <Route path="/contact" component={ContactUs}/>
          <Route path="/hottest-collection" component={Hottest}/>
-         <Route path="/trade-shows" component={TradeShows}/>  
+         <Route path="/trade-shows" component={TradeShows}/>
+
          <Route path="/"  component={Home}/>
-         
-       </Switch>
+
+        </Switch>
+
       </Layout>
      
      

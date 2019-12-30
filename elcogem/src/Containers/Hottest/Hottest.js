@@ -22,11 +22,8 @@ class Hottest extends Component {
         this.setState({loading: true});
         axios.get(instUri)
             .then((jsonData)=> {this.setState({loading: false});
-                                console.log('data Obj from ins:', jsonData);
-                                console.log('data array ... ', jsonData.data.data);
                                 this.setState({ instDataObject: jsonData.data.data}) })
                                 .catch(err => {
-                                    console.log("fetch instegram error: ", err.toString());
                                     this.setState({loaddingError: true, loading: false, loaddingMessage: err.toString()})
                                 });
                                 
@@ -56,7 +53,7 @@ class Hottest extends Component {
     }); 
     return (
         <div>
-            Hottest Collection .....
+            check out our collection on instagram
             {loading}
             {errorDisplayMessage}
             

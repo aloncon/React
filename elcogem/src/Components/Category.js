@@ -5,7 +5,7 @@ import styles from './Category.module.css';
 
 
 const Category = (props) => {
-
+    const innerWinWidth = windowSize.useWindowWidth();
     const getWidthType = (width) => {
         if(width >= 860)
             return '_800';
@@ -17,7 +17,9 @@ const Category = (props) => {
         return '';
     }
 
-    const imgSrc = 'images/' + props.id + getWidthType(windowSize.useWindowWidth()) +'.jpg';
+    const imgSrc = '_images/' + props.id + getWidthType(innerWinWidth) +'.jpg';
+    //const imgSrc = 'images/' + props.id + getWidthType(window.innerWidth) +'.jpg';
+
     return (<div className={styles.Main}>
         
         <div className={styles.Category}>

@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom';
+//import {BrowserRouter as Router} from 'react-router-dom';
+import {HashRouter as Router} from 'react-router-dom';
+
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import navReducer from './Store/reducer/navigation';
 import tradeReducer from './Store/reducer/tradeShows';
 import './index.css';
+import './css/fonts.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -22,7 +25,8 @@ const store = createStore(
 
 const app = (
 <Provider store={store}>
-    <Router>
+    <Router basename="/"
+            hashType="noslash">
         <App />
     </Router>
 </Provider>
