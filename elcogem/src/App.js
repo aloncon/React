@@ -12,7 +12,7 @@ import TradeShows from './Containers/TradeShows/TradeShows';
 
 function App() {
   return (
-    <div className={styles.Main}>
+    <div className={[styles.Main,'Main'].join(' ')}>
       <Layout>
        <Switch>
         

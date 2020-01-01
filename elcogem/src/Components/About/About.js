@@ -20,7 +20,7 @@ line of loose stones, Elco Gem maintains an extensive matching pairs inventory w
                         <span>New-York, NY 10036</span><br/>
                     <span>212-730-6547 Toll Free: 800-elco-gem</span><br/>
                     <span>Fax: 212-730-7746</span><br/>
-                    <span>elcogem@aol.com</span><br/>
+                    {/*<span>eli@elcogem.com</span><br/>*/}
                 </div>
             </div>
             

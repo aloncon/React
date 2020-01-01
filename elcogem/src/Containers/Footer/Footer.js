@@ -13,9 +13,9 @@ class Footer extends Component {
                      <div className={styles.IconRowItem}>
                         <p style={{width: '230px'}}>
                             <span className={styles.InnerTitle}>SOCIAL</span>
-                            <a href="https://www.instagram.com/elcogem/" class="fa fa-instagram" target="_blank"></a>
-                            <a href="https://www.facebook.com/ELCOGEM/?" class="fa fa-facebook" target="_blank"></a>
-                            <a href="#" class="fa fa-linkedin" target="_blank"></a>
+                            <a href="https://www.instagram.com/elcogem/" className="fa fa-instagram" target="_blank"></a>
+                            <a href="https://www.facebook.com/ELCOGEM/?" className="fa fa-facebook" target="_blank"></a>
+                            <a href="#" className="fa fa-linkedin" target="_blank"></a>
 
                         </p>
                      </div>
@@ -27,7 +27,7 @@ class Footer extends Component {
                      <div className={styles.IconRowItem}>
                         <p>
                             <span className={styles.InnerTitle}>Email us</span>
-                            <Link to="/contact-us" class="fa fa-envelope"></Link>
+                            <Link to="/contact-us" className="fa fa-envelope"></Link>
                         </p>
                      </div>
                     </div>

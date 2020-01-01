@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
-import * as actionTypes from '../../Store/actions/actions';
+import * as actionTypes from '../../Store/actions/actionsTradeShows';
 import tradeShowList from '../../ModuleInfo/trade_shows';
 import Loading from '../../UI/Loading';
 import Show from './Show/Show';

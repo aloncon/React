@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
 import * as windowSize from '../Hooks/windowSize';
 import Asset from '../hoc/Sources/Asset';
 import styles from './Category.module.css';
@@ -25,7 +26,7 @@ const Category = (props) => {
         <div className={styles.Category}>
 
          <div className={styles.ImgText}>{props.name}</div>
-            <Asset src={imgSrc} alt='ElcoGem'/>    
+            <Link to={{pathname: '/hottest-collection', search: 'type='+props.id}}><Asset src={imgSrc} alt={props.name}/></Link>
          </div>
         </div>
     );

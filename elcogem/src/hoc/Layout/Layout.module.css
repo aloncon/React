@@ -43,8 +43,14 @@
 }
 .Copyright {
   text-align: center;
+  font-size: 14px;
 }
 .FooterSeperator {
   text-align: center;
   padding: 3px 0;
+}
+@media (max-width: 600px) {
+  .Copyright {
+    font-size: 10px;
+  }
 }

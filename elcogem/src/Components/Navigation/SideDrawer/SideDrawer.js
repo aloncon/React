@@ -20,7 +20,7 @@ const SideDrawer = (props) => {
             <Backdrop isOpen={props.showSideDrawer}
                       closeClick={props.onToggleClick} /> 
             <div className={styleClass.join(' ')}>
-               
+                <div className={styles.ShowSideDrawerClose + ' fa fa-times'} onClick={props.onToggleClick}></div>
                 <Logo />
                 <nav>
                 <Navigation/>

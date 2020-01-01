@@ -9,7 +9,8 @@ const ContactInfo = () => {
                <p>580 5th Ave Suite 2214 New York N.Y 10036</p>
                <div className={styles.Table}>  
                 <ul className={styles.Table_UL}>
-                    <li>Tel: 212-730 65 47</li>
+                    <li className={styles.UL_LI_caption}>Tel: </li>
+                    <li>212-730 65 47</li>
                     <li>1800-ELCO-GEM</li>
                 </ul>
                 </div> 

@@ -11,6 +11,14 @@
     
 }
 
+.ShowSideDrawerClose{
+    position: absolute;
+    top:0px;
+    right: -10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
 .Close{
     transform: translateX(-100%);   
 }

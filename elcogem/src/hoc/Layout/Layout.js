@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import * as actionTypes from '../../Store/actions/actions';
+import * as actionTypes from '../../Store/actions/actionsTradeShows';
 import { connect } from 'react-redux';
 import Toolbar from '../../Components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../Components/Navigation/SideDrawer/SideDrawer';

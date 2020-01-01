@@ -8,14 +8,16 @@ import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import navReducer from './Store/reducer/navigation';
 import tradeReducer from './Store/reducer/tradeShows';
+import instagramReducer from './Store/reducer/instagram';
 import './index.css';
 import './css/fonts.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const rootReducer = combineReducers({
-    trade : tradeReducer,
-    nav: navReducer
+    trade       : tradeReducer,
+    nav         : navReducer,
+    instagram   : instagramReducer
    });
 
 const store = createStore(
@@ -32,7 +34,6 @@ const app = (
 </Provider>
 
 );
-
 
 ReactDOM.render(app, document.getElementById('root'));
 

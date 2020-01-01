@@ -4,7 +4,7 @@ import styles from './DrawerToggle.module.css';
 const DrawerToggle = (props) => {
     return (
     <div className={styles.DrawerToggleWrapper} onClick={props.onToggleClick}>
-        <div className={styles.DrawerToggle}>
+        <div className={styles.DrawerToggle} id="topDrawerToggle">
             <div></div>
             <div></div>
             <div></div>

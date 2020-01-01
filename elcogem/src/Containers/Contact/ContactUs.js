@@ -69,7 +69,24 @@ class ContactUs extends Component  {
         serverMessage: '',
         formValid: false
     }
-    
+
+    componentDidMount(){
+        const query = new URLSearchParams(this.props.location.search);
+
+        if (query.get('urlid') || query.get('itemid')) {
+            const itemId = query.get('itemid') , urlId='https://www.instagram.com/'+query.get('urlid');
+            const commentFill = `Hi, \nplease conatct me regarding the following item: \nitem: ${itemId}, \nurl: ${urlId} `
+            const contactDataCopy = {...this.state.contactData};
+            const commentCopy = {...contactDataCopy.comments};
+            commentCopy.value = commentFill;
+            contactDataCopy['comments'] = commentCopy;
+            this.setState({
+                ...this.state,
+                contactData : contactDataCopy
+            })
+        }
+    }
+
     formSubmitHandler = (event) => {
         event.preventDefault();
         this.setState( { loading: true } );
@@ -78,8 +95,10 @@ class ContactUs extends Component  {
             'from_name': this.state.contactData.name.value,
             'email': this.state.contactData.email.value,
             'company': this.state.contactData.company.value,
+            'phone': this.state.contactData.phone.value,
+            'comments': this.state.contactData.comments.value,
          };
-        console.log("[CU ] JSON.stringify(formData)", formData );
+        //console.log("[CU ] JSON.stringify(formData)", formData );
         const baseUrl = (window.location.href.indexOf('localhost')>-1) ? 'http://localhost/' : 'http://www.elcogem.com/new/';  
         //axios.post('http://www.elcogem.com/new/test3.php', formData)
         axios.post(baseUrl+'test3.php', qs.stringify(formData))
@@ -141,14 +160,14 @@ class ContactUs extends Component  {
             feildObj.isValid = false;
             feildObj.touched = false;
             contactDataReplica[feild] = feildObj;
-            console.log("xxxxxxxxxxxxxxxx feildObj:",feildObj); 
+            //console.log("xxxxxxxxxxxxxxxx feildObj:",feildObj);
         }
         
         this.setState({
             contactData: contactDataReplica
         })
-        console.log("xxxxxxxxxxxxxxxx contactDataReplica:",contactDataReplica);
-        console.log("xxxxxxxxxxxxxxxx contactdata:",this.state.contactData);
+        //console.log("xxxxxxxxxxxxxxxx contactDataReplica:",contactDataReplica);
+        //console.log("xxxxxxxxxxxxxxxx contactdata:",this.state.contactData);
 
     }
 

@@ -1,0 +1,66 @@
+
+.Sticky #topTextWrapper h3{
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .Sticky{
+    }
+    main{
+        padding-top:160px !important;
+    }
+    .Sticky #topTextWrapper{
+        text-align: right;
+        position: absolute;
+        top:10px;
+        left:unset;
+        right: 0;
+        transform: translate(0, 0);
+    }
+    .Sticky #topToolbarTop{
+        height: 20px;
+        transition: height 400ms ease-out;
+
+    }
+    .Sticky #topTextWrapper h2{
+        font-size: 26px;
+    }
+    .Sticky #topLogo,
+    .Sticky #topTextWrapper h3{
+        display: none;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 650px) {
+    .Sticky #topTextWrapper h2{
+        font-size: 18px;
+    }
+    .Sticky #topTextWrapper {
+        top: 12px;
+    }
+}
+
+@media (max-width: 599px) {
+    main{
+        padding-top:110px !important;
+    }
+    .Sticky #XtopTextWrapper{
+        text-align: right;
+        position: absolute;
+        top:10px;
+        left:unset;
+        right: 0;
+        transform: translate(0, 0);
+    }
+    .Sticky #topToolbarTop{
+        height: 60px;
+        transition: height 400ms ease-out;
+
+    }
+    .Sticky #topTextWrapper h2{
+        font-size: 26px;
+    }
+    .Sticky #topDrawerToggle{
+        height: 70%;
+    }
+}
