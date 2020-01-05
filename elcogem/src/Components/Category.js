@@ -25,7 +25,7 @@ const Category = (props) => {
         
         <div className={styles.Category}>
 
-         <div className={styles.ImgText}>{props.name}</div>
+            <div className={styles.ImgText + ' '+ styles[props.name]}><Link to={{pathname: '/hottest-collection', search: 'type='+props.id}}>{props.name}</Link></div>
             <Link to={{pathname: '/hottest-collection', search: 'type='+props.id}}><Asset src={imgSrc} alt={props.name}/></Link>
          </div>
         </div>

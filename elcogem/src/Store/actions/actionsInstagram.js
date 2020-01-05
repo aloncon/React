@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+export const LOAD_MEDIA_REQUESTED_FOR_TYPE = 'LOAD_MEDIA_REQUESTED_FOR_TYPE';
+export const LOAD_MEDIA_REQUESTED = 'LOAD_MEDIA_REQUESTED';
 export const LOAD_MEDIA_START = 'LOAD_MEDIA_START';
 export const LOAD_MEDIA_FAIL = 'LOAD_MEDIA_FAIL';
 export const LOAD_MEDIA_SUCESS = 'LOAD_MEDIA_SUCESS';
@@ -7,26 +9,20 @@ export const ADD_MEDIA_SUCESS = 'ADD_MEDIA_SUCESS';
 
 const instUri = "https://api.instagram.com/v1/users/6974393317/media/recent?access_token=6974393317.1677ed0.cae455253ae34dfcbbca5e59f4cc9a4c&count=50";
 
-const fetchDataFromInstagram = (url) => {
+export const fetchDataFromInstagram = (url = instUri) => {
     return new Promise((resolve, reject)=>{
-        //fetch
-        //const instUri = "https://api.instagram.com/v1/users/624059676/media/recent?access_token=624059676.1677ed0.cec7da6c5f1d4b8b8b2dc68258e31309&count=12";
-
-
         axios.get(url)
             .then((jsonData)=> {
-
-                //console.log('data from inst JSON', jsonData);
                 resolve(jsonData.data);
              })    
             .catch(err => {
                 reject(err);
-                //this.setState({loaddingError: true, loading: false, loaddingMessage: err.toString()})
             });
 
     })
 }
 
+/*
 export function loadMediaFromInstagram() {
     console.log('Actions start loading Media');
     return async dispatch => {
@@ -42,6 +38,7 @@ export function loadMediaFromInstagram() {
         }
     }
 }
+
 export function loadMediaFromInstagramForType(type) {
 
     return async dispatch => {
@@ -70,6 +67,16 @@ export function loadMediaFromInstagramForType(type) {
         }
     }
 }
+*/
+
+
+export const loadMediaFromInstagramRequested = () => ({
+    type: LOAD_MEDIA_REQUESTED
+});
+export const loadMediaFromInstagramPerTypeRequested = (type) => ({
+    type: LOAD_MEDIA_REQUESTED_FOR_TYPE,
+    payload: type
+});
 export const loadMediaFromInstagramStart = () => ({
         type: LOAD_MEDIA_START
 });

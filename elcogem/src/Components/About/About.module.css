@@ -1,3 +1,7 @@
+.MainImageDiv{
+    overflow: hidden;
+    text-align: center;
+}
 .contactBox {
     text-align: center;
     font-weight: bold;

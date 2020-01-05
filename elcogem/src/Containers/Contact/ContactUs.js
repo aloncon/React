@@ -90,7 +90,7 @@ class ContactUs extends Component  {
     formSubmitHandler = (event) => {
         event.preventDefault();
         this.setState( { loading: true } );
-        console.log("[CU ] SUBMIT " )
+        //console.log("[CU ] SUBMIT " )
         const formData = {
             'from_name': this.state.contactData.name.value,
             'email': this.state.contactData.email.value,
@@ -105,7 +105,7 @@ class ContactUs extends Component  {
         .then((Response)=>{
             this.setState({loading:false,
                            serverMessage: 'Your Email Submitted Successfuly!'});
-            console.log("Submitted Successfuly", Response.data);
+            //console.log("Submitted Successfuly", Response.data);
              
         })
 
@@ -116,7 +116,7 @@ class ContactUs extends Component  {
         if(!ElelmentValidation.required){
             return true;
         }else{
-            console.log("[Contact ] Check valiidt", ElelmentValidation.required);
+            //console.log("[Contact ] Check valiidt", ElelmentValidation.required);
             let isElementValid = true;
             for(let validationKey in ElelmentValidation){
                 switch(validationKey){
@@ -129,7 +129,9 @@ class ContactUs extends Component  {
                     case 'isEmail':
                             const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
                             isElementValid = pattern.test(value) && isElementValid;                            
-                        break;        
+                        break;
+                    default:
+                        isElementValid = isElementValid && true;
                     }
             }
             return isElementValid;
@@ -138,9 +140,9 @@ class ContactUs extends Component  {
 
     isFormValid = (contactDataReplica) => {
         let formIsValid = true;
-        console.log("isFromValid", contactDataReplica);
+        //console.log("isFromValid", contactDataReplica);
         for(let feild in contactDataReplica){
-            console.log("isFromValid contactDataReplica[feild].validation.required", contactDataReplica[feild].validation.required);
+            //console.log("isFromValid contactDataReplica[feild].validation.required", contactDataReplica[feild].validation.required);
            if(contactDataReplica[feild] && contactDataReplica[feild].validation.required) 
                 formIsValid = formIsValid && contactDataReplica[feild].isValid; 
         }
@@ -180,7 +182,7 @@ class ContactUs extends Component  {
         }
         
         const isValid = this.checkValidity(contactDataInputElelment.validation, event.target.value);
-        console.log('[contact ] is valid:', isValid);
+        //console.log('[contact ] is valid:', isValid);
         contactDataInputElelment.value = event.target.value;
         if(event.target.value.length > 0)
         contactDataInputElelment.touched = true;
@@ -198,7 +200,7 @@ class ContactUs extends Component  {
     }
 
     render(){ 
-        console.log('window.location.href', window.location.href.indexOf('localhost')>-1)
+        //console.log('window.location.href', window.location.href.indexOf('localhost')>-1)
     const loading = this.state.loading ? <Loading /> : null;
     const inputElementArr = [];
 

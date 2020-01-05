@@ -5,10 +5,13 @@ import {HashRouter as Router} from 'react-router-dom';
 
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
-import thunk from 'redux-thunk';
+//import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
+import rootSaga from './sagas/index';
 import navReducer from './Store/reducer/navigation';
 import tradeReducer from './Store/reducer/tradeShows';
 import instagramReducer from './Store/reducer/instagram';
+
 import './index.css';
 import './css/fonts.css';
 import App from './App';
@@ -20,10 +23,13 @@ const rootReducer = combineReducers({
     instagram   : instagramReducer
    });
 
+const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
     rootReducer, 
-    applyMiddleware(thunk)
+    applyMiddleware(sagaMiddleware)
 );
+
+sagaMiddleware.run(rootSaga);
 
 const app = (
 <Provider store={store}>

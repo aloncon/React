@@ -3,7 +3,7 @@ export const getScriptURL = (function() {
     const index = scripts.length - 1;
     const myScript = scripts[index];
     
-    console.log("Nav Item getScriptURL", myScript.src);
+    //console.log("Nav Item getScriptURL", myScript.src);
 
 
     return {

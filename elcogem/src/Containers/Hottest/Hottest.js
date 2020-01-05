@@ -13,12 +13,12 @@ class Hottest extends Component {
     }
 
     componentDidMount(){
-
         const searchParam = this.props.location.search.split('=')[1];
         if(searchParam && searchParam.length > 0 )
-            this.props.dispatch(actionTypes.loadMediaFromInstagramForType(searchParam));
+            //this.props.dispatch(actionTypes.loadMediaFromInstagramForType(searchParam));
+            this.props.dispatch(actionTypes.loadMediaFromInstagramPerTypeRequested(searchParam));
         else
-            this.props.dispatch(actionTypes.loadMediaFromInstagram());
+            this.props.dispatch(actionTypes.loadMediaFromInstagramRequested());
     }
     
    render(){
@@ -26,6 +26,7 @@ class Hottest extends Component {
     const loading = this.props.loading ? <Loading /> : null;
     const errorDisplayMessage = this.props.loaddingError ? <div>Oops, seems we have internal loading issue <br/>(<span style={{fontSize: '10px'}}>{this.props.loaddingMessage}</span>)</div> : null;
     const instagramGallery = this.props.instDataObject.map( (post) => {
+
         const caption = (post.caption && post.caption.hasOwnProperty('text')) ?
                         (<div className={styles.Caption} style={{width:'310px'}}>{post.caption.text.replace(/\#.*/ig,"")}</div>) : 
                         null;
@@ -53,7 +54,7 @@ class Hottest extends Component {
             
             <div className={["container", styles.Container].join(' ')}>
                
-                 <div className='row'>{instagramGallery}</div>
+                 <div className='row' style={{justifyContent: 'space-evenly'}}>{instagramGallery}</div>
                
 
             </div>

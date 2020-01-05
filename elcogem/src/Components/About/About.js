@@ -2,8 +2,12 @@ import React from 'react';
 import styles from './About.module.css'
 
 const About = () => {
+    const bulkArr = ['bulk1.jpg', 'bulk2.jpg', 'bulk3.jpg'];
+    console.log('random ' , Math.floor(Math.random()*3));
+    const randIndex = Math.floor(Math.random()*3);
     return (
         <div className={styles.About}>
+            <div className={styles.MainImageDiv}><img src={'/_images/'+bulkArr[randIndex]} alt="ElcoGem Gem Stones"/></div>
 			<p><b>Elco gem co.</b> specializesin a variety of calibrated and single gemstones.</p>
 			<p>Elco Gem is an importer of top quality Zambian and Columbian Emerald, Burmese Ruby, Ceylon
 			 Sapphire (blue, yellow, and pink).						

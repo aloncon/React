@@ -35,6 +35,8 @@ const reducer = (state = initialState, action) => {
                 instDataObject: ([...state.instDataObject]).concat(action.payload.mediaDataArr),
                 loading: false
             }
+        default:
+            return state;
     }
     return state;
 }

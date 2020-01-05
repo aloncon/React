@@ -21,6 +21,20 @@
   text-align: left;
   font-style: italic;
 }
+.ImgText A:link,
+.ImgText A:visited,
+.ImgText A:active {
+  color: #676767;
+}
+.Ruby A:hover {
+  color: red;
+}
+.Sapphire A:hover {
+  color: blue;
+}
+.Emerald A:hover {
+  color: green;
+}
 @media (max-width: 600px) {
   .ImgText {
     font-size: 24px;

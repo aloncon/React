@@ -13,7 +13,8 @@ class TradeShows extends Component {
         ModalKey: null
     }
     componentDidMount () {
-        this.props.dispatch(actionTypes.loadTradeShows());
+        //this.props.dispatch(actionTypes.loadTradeShows());
+        this.props.dispatch(actionTypes.loadTradeRequest());
     }
 
     OpenModalHendler = (key) => {

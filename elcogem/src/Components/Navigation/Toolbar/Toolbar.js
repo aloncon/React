@@ -12,7 +12,7 @@ const Toolbar = (props)=>{
         const myFunction = ()=>{
             const sticky = navBar.offsetTop;
             let toolbarOffset = window.pageYOffset;
-            console.log('myFunction', window.pageYOffset, 'toolbaOfset: ', toolbarOffset, ' Sticky navbar ofsettop: ', sticky);
+
             if(toolbarOffset > (sticky)){
                 navBarHeader.classList.add('Sticky');
             }else{

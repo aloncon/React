@@ -9,6 +9,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.LOAD_TRADE_START : 
+
             return {
                 ...state,
                 onLoad: true,

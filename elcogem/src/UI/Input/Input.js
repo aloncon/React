@@ -4,7 +4,7 @@ import styles from './Input.module.css';
 
 const Input = (props) => {
     const classNameList = props.iType==='textarea'? [styles.TextAreaElement] : [styles.InputElement];
-    console.log('props.isValid', props.isValid)
+    //console.log('props.isValid', props.isValid)
     if(!props.isValid && props.isTouched){
         classNameList.push(styles.Invalid);
     }

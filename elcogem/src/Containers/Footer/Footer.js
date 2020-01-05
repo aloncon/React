@@ -7,15 +7,15 @@ class Footer extends Component {
     render(){
         return (
             <footer className={styles.Footer}>
-                <div className={styles.FooterSeperator}><img src='./_images/gem_line_mobile.jpg'/></div>
+                <div className={styles.FooterSeperator}><img src='./_images/gem_line_mobile.jpg' alt="ELCOGEM.com gemstones"/></div>
                 <div className={styles.FooterInner}>
                     <div className={styles.IconRow}>
                      <div className={styles.IconRowItem}>
                         <p style={{width: '230px'}}>
                             <span className={styles.InnerTitle}>SOCIAL</span>
-                            <a href="https://www.instagram.com/elcogem/" className="fa fa-instagram" target="_blank"></a>
-                            <a href="https://www.facebook.com/ELCOGEM/?" className="fa fa-facebook" target="_blank"></a>
-                            <a href="#" className="fa fa-linkedin" target="_blank"></a>
+                            <a href="https://www.instagram.com/elcogem/" className="fa fa-instagram" target="_blank" rel="noopener"></a>
+                            <a href="https://www.facebook.com/ELCOGEM/?" className="fa fa-facebook" target="_blank" rel="noopener"></a>
+                            <a href="#" className="fa fa-linkedin" target="_blank" rel="noopener"></a>
 
                         </p>
                      </div>
