@@ -2,6 +2,7 @@ import * as actionTypes from '../actions/actionsInstagram';
 
 const initialState = {
     instDataObject : [],
+    instDataObjectFirst30 : [],
     loading: true,
     loaddingError: false,
     loaddingMessage: null
@@ -22,6 +23,14 @@ const reducer = (state = initialState, action) => {
                 loaddingError: true,
                 loaddingMessage: JSON.stringify(action.payload.error)
             }
+        case (actionTypes.LOAD_MEDIA_FIRST30_SUCESS):
+
+            return {
+                ...state,
+                instDataObjectFirst30: action.payload.mediaDataArr,
+                loading: false
+            }
+
         case (actionTypes.LOAD_MEDIA_SUCESS):
 
             return {

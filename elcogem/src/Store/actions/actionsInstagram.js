@@ -5,6 +5,7 @@ export const LOAD_MEDIA_REQUESTED = 'LOAD_MEDIA_REQUESTED';
 export const LOAD_MEDIA_START = 'LOAD_MEDIA_START';
 export const LOAD_MEDIA_FAIL = 'LOAD_MEDIA_FAIL';
 export const LOAD_MEDIA_SUCESS = 'LOAD_MEDIA_SUCESS';
+export const LOAD_MEDIA_FIRST30_SUCESS = 'LOAD_MEDIA_FIRST30_SUCESS';
 export const ADD_MEDIA_SUCESS = 'ADD_MEDIA_SUCESS';
 
 const instUri = "https://api.instagram.com/v1/users/6974393317/media/recent?access_token=6974393317.1677ed0.cae455253ae34dfcbbca5e59f4cc9a4c&count=50";
@@ -81,6 +82,10 @@ export const loadMediaFromInstagramStart = () => ({
         type: LOAD_MEDIA_START
 });
 
+export const loadMediaFirst30FromInstagramSuccess = (mediaDataArr)=>({
+    type: LOAD_MEDIA_FIRST30_SUCESS,
+    payload: {mediaDataArr}
+})
 export const loadMediaFromInstagramSuccess = (mediaDataArr)=>({
     type: LOAD_MEDIA_SUCESS,
     payload: {mediaDataArr}

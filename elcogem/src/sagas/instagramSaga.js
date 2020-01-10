@@ -13,7 +13,7 @@ const instUri = "https://api.instagram.com/v1/users/6974393317/media/recent?acce
                          (obj.caption && obj.caption.hasOwnProperty('text') &&
                           obj.caption.text.toLowerCase().indexOf('(_general)') == -1) )
             );
-            yield put(instaActions.loadMediaFromInstagramSuccess(mediaArrClean));
+            yield put(instaActions.loadMediaFirst30FromInstagramSuccess(mediaArrClean));
         }catch(error){
             console.log('SAGA Action start Media load FAILD');
             yield put(instaActions.loadMediaFromInstagramFailure(error));

@@ -4,16 +4,17 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 import * as actionTypes from '../../Store/actions/actionsInstagram';
 import Loading from '../../UI/Loading';
-import styles from './Hottest.module.css'; 
+import styles from './Hottest.module.css';
 
 
 class Hottest extends Component {
     
     state = {
     }
-
+    searchParam = this.props.location.search.split('=')[1];
     componentDidMount(){
-        const searchParam = this.props.location.search.split('=')[1];
+        //const searchParam = this.props.location.search.split('=')[1];
+        const searchParam = this.searchParam;
         if(searchParam && searchParam.length > 0 )
             //this.props.dispatch(actionTypes.loadMediaFromInstagramForType(searchParam));
             this.props.dispatch(actionTypes.loadMediaFromInstagramPerTypeRequested(searchParam));
@@ -25,7 +26,8 @@ class Hottest extends Component {
     //const loading = this.state.loading ? <Loading /> : null;
     const loading = this.props.loading ? <Loading /> : null;
     const errorDisplayMessage = this.props.loaddingError ? <div>Oops, seems we have internal loading issue <br/>(<span style={{fontSize: '10px'}}>{this.props.loaddingMessage}</span>)</div> : null;
-    const instagramGallery = this.props.instDataObject.map( (post) => {
+    const dataObject = (this.searchParam && this.searchParam.length>0) ? this.props.instDataObject : this.props.instDataObjectFirst30;
+    const instagramGallery = dataObject.map( (post) => {
 
         const caption = (post.caption && post.caption.hasOwnProperty('text')) ?
                         (<div className={styles.Caption} style={{width:'310px'}}>{post.caption.text.replace(/\#.*/ig,"")}</div>) : 
@@ -66,6 +68,7 @@ class Hottest extends Component {
 
 const mapStateToProps = (state)=>{
     return {
+        instDataObjectFirst30 : state.instagram.instDataObjectFirst30,
         instDataObject : state.instagram.instDataObject,
         loading        : state.instagram.loading,
         loaddingError  : state.instagram.loaddingError ,
